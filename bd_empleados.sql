@@ -63,9 +63,9 @@ select upper(concat(nombre,' ',apellido1,' ',apellido2)) as 'Full Name' from emp
 #9.	Lista el nombre y apellidos de los empleados en una única columna, convirtiendo todos los caracteres en minúscula.
 select lower(concat(nombre,' ',apellido1,' ',apellido2)) as 'Full Name' from empleado;
 #10.	Lista el código de los empleados junto al nif, pero el nif deberá aparecer en dos columnas, una mostrará únicamente los dígitos del nif y la otra la letra.
-
+#----------------
 #11.	Lista el nombre de cada departamento y el valor del presupuesto actual del que dispone. Para calcular este dato tendrá que restar al valor del presupuesto inicial (columna presupuesto) los gastos que se han generado (columna gastos). Tenga en cuenta que en algunos casos pueden existir valores negativos. Utilice un alias apropiado para la nueva columna columna que está calculando.
-
+select nombre ,(presupuesto-gastos) as 'Presupuesto actual' from departamento;
 #12.	Lista el nombre de los departamentos y el valor del presupuesto actual ordenado de forma ascendente.
 select nombre,presupuesto from departamento order by presupuesto asc;
 #13.	Lista el nombre de todos los departamentos ordenados de forma ascendente.
